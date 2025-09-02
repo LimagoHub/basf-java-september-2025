@@ -2,11 +2,13 @@ package de.basf.tiere;
 
 public class Schwein {
 
+    // Instanzvariablen oder Eigenschaften oder Attribute
     private String name;
     private int gewicht;
     // KLassenvariable
     private static int counter;
 
+    // KLassenkonstruktor
     static {
         counter = 0;
     }
