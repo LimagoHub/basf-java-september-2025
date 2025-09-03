@@ -1,14 +1,20 @@
 package de.basf.application.de.basf.geo;
 
-public class Punkt {
+public class Punkt extends Object {
 
     private final static double MAX = 10.0;
     private double x;
     private  double y;
 
     public Punkt(){
-        this.x = 0.0;
-        this.y = 0.0;
+
+        this(0,0);
+
+    }
+    public Punkt(double x, double y) {
+        setX(x);
+        setY(y);
+        System.out.println("Punkt created");
     }
 
     private void setX(double x) {
@@ -33,7 +39,7 @@ public class Punkt {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Punkt{");
+        final StringBuilder sb = new StringBuilder(getClass().getSimpleName()+"{");
         sb.append("x=").append(x);
         sb.append(", y=").append(y);
         sb.append('}');
@@ -41,8 +47,13 @@ public class Punkt {
     }
 
     public void rechts() {
-        setX(getX() + 1.0);
+        rechts(1.0);
     }
+    public void rechts(double schrittweite) {
+        setX(getX() + schrittweite);
+    }
+
+
     public void links() {
         setX(getX() - 1.0);
     }

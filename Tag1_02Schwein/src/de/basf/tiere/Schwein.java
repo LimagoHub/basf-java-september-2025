@@ -18,7 +18,11 @@ public class Schwein {
     }
     // Instanzkonstruktor
     public Schwein() {
-        name = "Nobody";
+       this("Nobody");
+    }
+
+    public Schwein(String name) {
+        this.name = name;
         gewicht = 10;
         counter++;
     }
