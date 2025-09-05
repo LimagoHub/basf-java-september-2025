@@ -11,11 +11,14 @@ import java.awt.event.MouseListener;
 
 public class Fenster extends Frame implements KeyListener, MouseListener {
 
-
+    private final static int SIZE = 600;
     private String message="Hallo: ";
 
+    private int x,y;
+
     public Fenster() {
-        setSize(300, 300);
+        x = y = SIZE/2;
+        setSize(SIZE, SIZE);
         addKeyListener(this);
         addMouseListener(this);
     }
@@ -23,6 +26,7 @@ public class Fenster extends Frame implements KeyListener, MouseListener {
     @Override
     public void paint(final Graphics g) {
         g.drawString(message , 100, 100);
+        g.drawRect(x, y, 30, 30);
 
     }
 
