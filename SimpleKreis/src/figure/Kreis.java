@@ -4,7 +4,7 @@ public class Kreis {
     private double radius;
 
     public Kreis() {
-        radius = 0.0;
+        radius = 0;
     }
 
     public double getRadius() {
