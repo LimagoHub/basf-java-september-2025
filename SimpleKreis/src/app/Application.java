@@ -8,6 +8,8 @@ public class Application {
         Kreis kreis = new Kreis();
         kreis.setRadius(10.0);
 
-        System.out.println(kreis);
+        System.out.println(kreis.getRadius());
+        System.out.println(kreis.getUmfang());
+
     }
 }

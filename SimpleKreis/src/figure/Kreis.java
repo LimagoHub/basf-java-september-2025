@@ -4,7 +4,20 @@ public class Kreis {
     private double radius;
 
     public Kreis() {
-        radius = 0;
+        this(0.0);
+    }
+
+    public Kreis(final double radius) {
+        setRadius(radius);
+    }
+
+    public void setUmfang(final double umfang) {
+
+        setRadius( umfang / (2 * Math.PI));
+    }
+
+    public double getUmfang(){
+        return 2.0 * Math.PI * radius;
     }
 
     public double getRadius() {
